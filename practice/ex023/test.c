@@ -2,15 +2,17 @@
 #include <stdlib.h>
 
 int main() {
-    int num = 0;
-    int con = 0;
-    int fatorial = 1;
-    printf("Please, type an intenger number: ");
-    scanf("%i", &num);
-    while (con < num) {
-        fatorial = fatorial * (num - con);
-        con += 1;
+    float num = 1;
+    float plus = 0; 
+    int cont = 0;
+    while (num != 0) {
+        printf("Please, type any number: ");
+        scanf("%f", &num);
+        cont += 1;
+        plus += num;
     }
-    printf("%i", fatorial);
+    num -= 1;
+    printf("\nThe plus of the numbers in the sequence is: %f", plus);
+    printf("\nThe total of the numbers typed is: %i", cont);
     return 0;
 }
