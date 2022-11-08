@@ -13,6 +13,15 @@ void print(int matrix[][5]) {
     }
 }
 
+int plusColunm(int matrix2[][5], int c) {
+    int plus = 0;
+    int tam = 5;
+
+    for (int k = 0; k < tam; k++) 
+        plus += matrix2[k][c];
+    return plus;
+};
+
 int plusLine(int matrix1[][5], int l) {
     int c, plus = 0;
     int tam = 5;
@@ -39,7 +48,10 @@ int main(void) {
     print(mat);
     printf("\n\n");
     for (int i = 0; i < tam; i++) 
-         printf("Plus of the line %i: %i\n", i, plusLine(mat, i));
+         printf("Plus of the line %i: %i\n", i + 1, plusLine(mat, i));
+    printf("\n\n");
+    for (int i = 0; i < tam; i++) 
+         printf("Plus of the colunm %i: %i\n", i + 1, plusColunm(mat, i));
     
 
     return 0;
